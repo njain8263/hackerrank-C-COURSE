@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, k,a,b,max1=0,max2=0,max3=0,count=0;
+  
+    scanf("%d %d", &n, &k);
+    for(a=1;a<n;a++)
+    {
+        for(b=a+1;b<=n;b++)
+        {
+        
+          if(max1<(a&b) && (a&b)<k)
+            {  
+                max1=(a&b);
+                
+                
+            }
+            else
+            {}
+
+
+            if(max2<(a|b) && (a|b)<k)
+            {  
+                max2=(a|b);
+            }
+            else{}
+
+
+            if(max3<(a^b) && (a^b)<k)
+            {   
+                max3=(a^b);
+            }
+            else{}
+            count++;
+        
+        }
+    }
+    printf("%d\n%d\n%d",max1,max2,max3);
+return 0;
+}
