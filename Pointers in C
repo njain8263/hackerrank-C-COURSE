@@ -1,0 +1,23 @@
+#include <stdio.h>
+void update(int *a,int *b);
+void update(int *a,int *b) {
+        int sum = (*a)+(*b);
+        int dif = (*a)-(*b);
+        *a=sum;
+        if(dif>0)
+        *b=dif;
+        else 
+        *b=(-dif);
+
+}
+
+int main() {
+    int a, b;
+    int *p = &a, *q = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(p, q);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
