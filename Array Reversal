@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int j,b,v=0,n,k,i,a[1000];
+    scanf("%d ",&n);
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    if(n%2==0)
+    {
+        for(j=1;j<=n/2;j++)
+        {
+            v=a[n/2-j];
+            a[n/2-j]=a[n/2+j];
+            a[n/2+j]=v;
+        }
+        
+        for(k=1;k<=n;k++)
+    {
+    printf("%d ",a[k]);
+    }
+    }
+    else
+    {   
+        b=(n-1)/2;
+        for(j=1;j<=b;j++)
+        {
+            v=a[b-j];
+            a[b-j]=a[b+j];
+            a[b+j]=v;
+        }
+    for(k=0;k<n;k++)
+    {
+    printf("%d ",a[k]);
+    }
+        
+    }
+    
+    
+return 0;
+}
